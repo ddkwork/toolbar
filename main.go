@@ -9,6 +9,6 @@ import (
 
 func main() {
 	app.Run("toolbar", func(w *unison.Window) {
-		toolbar.New().Layout(w.Content())
+		w.Content().AddChild(toolbar.New().Layout())
 	})
 }
